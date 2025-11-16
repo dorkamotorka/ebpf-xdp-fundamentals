@@ -46,7 +46,7 @@ func main() {
 	xdplink, err := link.AttachXDP(link.XDPOptions{
 				Program:   objs.XdpProgram,
 				Interface: iface.Index,
-				//Flags: link.XDPDriverMode,
+				Flags: link.XDPGenericMode,
 	})
 	if err != nil {
 		log.Fatal("Attaching XDP:", err)
